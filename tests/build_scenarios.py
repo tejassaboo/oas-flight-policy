@@ -174,6 +174,7 @@ def on_file(role):
 LOWEST_CLAUSES = ["CLASS_OF_SERVICE", "LOWEST_LOGICAL_FARE", "LOWEST_LOGICAL_FARE_DEFINITION", "TRAVEL_CLASS"]
 CLASS_CLAUSES = ["CLASS_OF_SERVICE", "CABIN_EXCEPTIONS", "PREMIUM_TRAVEL", "TRAVEL_CLASS"]
 SENIOR_CLAUSES = ["CLASS_OF_SERVICE", "TRAVEL_CLASS"]
+SENIOR_PREMIUM = ["PREMIUM_FARE_AUTHORIZED", "SENIOR_ROLE_ENTITLEMENT"]
 PREFERENCE_CLAUSES = ["COMPARABLE_OPTIONS", "PERSONAL_PREFERENCE", "PERSONAL_PREFERENCE_DEFINITION"]
 ROUTE_CLAUSES = PREFERENCE_CLAUSES + ["CONNECTIONS", "LOWEST_LOGICAL_FARE", "LOWEST_LOGICAL_FARE_DEFINITION"]
 PERSONAL_CLAUSES = ["COMPARABLE_OPTIONS", "OFFICIAL_WITH_PERSONAL", "PERMISSIBLE_CHANGES", "PERSONAL_COSTS"]
@@ -210,14 +211,16 @@ scenario(
 
 scenario(
     "basalt-vine", "easy", ["dearer_option"],
-    "Dulles to Santiago on March 8th, overnight, for the regional consultations that open the next afternoon. "
-    "Business class, please.",
+    "Dulles to Santiago on March 8th, overnight, for the regional consultations that open the next afternoon. The "
+    "Secretary General approved business class for this trip in writing. Business class, please.",
     trip(traveller_name="Amb. Lucia Ferreyra", traveller_title="Chair of the Permanent Council",
          position="PERMANENT_COUNCIL_CHAIR", works_for="Permanent Council of the OAS", origin="IAD", destination="SCL",
          travel_date="2027-03-08", booking_date="2027-01-18", work_starts="2027-03-09 15:00",
          purpose="Regional consultations of the Permanent Council in Santiago", purpose_kind="MISSION",
          requested_cabin="BUSINESS",
-         sign_offs=[authorized("CHIEF_OF_STAFF", "Mariano Ocampo", "2027-01-15")]),
+         sign_offs=[authorized("CHIEF_OF_STAFF", "Mariano Ocampo", "2027-01-15"),
+                    sign("SECRETARY_GENERAL", "Ernesto Valdivia", "PREMIUM_FARE_FORM", "2027-01-15",
+                         "Premium Fare Authorization Form: business class for this trip", cabin="BUSINESS")]),
     search("IAD", "SCL", "2027-03-08", {
         "latam": {"carrier": "LA", "depart": "21:10"},
         "united": {"carrier": "UA", "depart": "22:05"},
@@ -227,11 +230,14 @@ scenario(
         offer("united-economy", "united", "ECONOMY", 111000),
         offer("united-business", "united", "BUSINESS", 398000),
     ]),
-    expected("BOOK", ["latam-business"], ["BUSINESS"], ["SENIOR_ROLE_ENTITLEMENT"], on_file("CHIEF_OF_STAFF"),
-             SENIOR_CLAUSES),
+    expected("BOOK", ["latam-business"], ["BUSINESS"], SENIOR_PREMIUM, on_file("CHIEF_OF_STAFF") + ["SECRETARY_GENERAL"],
+             CLASS_CLAUSES),
     [TRAVEL_CLASS, CLASS, AUTH],
     "Tickets for the Chair of the Permanent Council are excepted from economy class (lines 145-146, 324-328; footnote "
-    "3). She asks for business: the cheapest business fare, LATAM at $3,620. The Chief of Staff authorized the trip.")
+    "3). She asks for business: the cheapest business fare, LATAM at $3,620. The Chief of Staff authorized the trip. "
+    "The Secretary General's written approval of business is on file too (audit), so a reader who applies 'Any "
+    "requests ... of a different class of service must be approved ... by the Secretary General' (328-335) to the "
+    "three officials books the same ticket.")
 
 scenario(
     "condor-flats", "easy", ["upgrade_not_taken"],
@@ -341,12 +347,15 @@ LAX_TRIP = dict(traveller_name="Daniel Achterberg", traveller_title="Program Off
 
 scenario(
     "fern-canyon", "boundary_twin", ["multi_leg", "dearer_option"], LAX_REQUEST, trip(**LAX_TRIP), lax(50900),
-    expected("BOOK", ["nonstop-economy"], ["ECONOMY"], ["ALTERNATE_ROUTE_WITHIN_MARGIN", "COMPARABLE_FARE_OPTION"],
+    expected("BOOK", ["dallas-economy", "nonstop-economy"], ["ECONOMY"],
+             ["ALTERNATE_ROUTE_WITHIN_MARGIN", "COMPARABLE_FARE_OPTION", "COST_SAVINGS", "LOWEST_FARE"],
              on_file("SECRETARY"), ROUTE_CLAUSES),
     [COMPARABLE, PREF, FOOTNOTE, AUTH],
     "The connection through Dallas ($310, 150 minutes longer, both leave 08:00) is the lowest logical fare. The "
     "nonstop costs $199 more: 'not higher than $200', so it is a comparable option (lines 166-167, 389-391), and a "
-    "saving of $199 does not make the connection required (lines 167-169). The traveller's nonstop is booked.",
+    "saving of $199 does not make the connection required (lines 167-169). The traveller's nonstop is booked. A "
+    "reader who holds to 'Lowest available fares must be used whenever possible' (161, 365) books the connection; "
+    "the audit accepts both.",
     twin_of="guava-ledge", twin_fact="the nonstop costs $199 or $201 more than the connection")
 
 scenario(
@@ -468,13 +477,16 @@ scenario(
 scenario(
     "llama-terrace", "multi_rule", ["dearer_option", "outside_air_section"],
     "Dulles to San Juan on April 26th for the Caribbean disaster-resilience summit the next morning. I signed my own "
-    "travel request for this one. Business class, please.",
+    "travel request for this one, and the Secretary General approved business class for it in writing. Business "
+    "class, please.",
     trip(traveller_name="Nathaniel Brathwaite", traveller_title="Assistant Secretary General",
          position="ASSISTANT_SECRETARY_GENERAL", works_for="Office of the Assistant Secretary General", origin="IAD",
          destination="SJU", travel_date="2027-04-26", booking_date="2027-03-08", work_starts="2027-04-27 09:00",
          purpose="Caribbean disaster-resilience summit in San Juan", purpose_kind="CONFERENCE",
          requested_cabin="BUSINESS",
-         sign_offs=[authorized("ASSISTANT_SECRETARY_GENERAL", "Nathaniel Brathwaite", "2027-03-08")]),
+         sign_offs=[authorized("ASSISTANT_SECRETARY_GENERAL", "Nathaniel Brathwaite", "2027-03-08"),
+                    sign("SECRETARY_GENERAL", "Ernesto Valdivia", "PREMIUM_FARE_FORM", "2027-03-05",
+                         "Premium Fare Authorization Form: business class for this trip", cabin="BUSINESS")]),
     search("IAD", "SJU", "2027-04-26", {
         "united": {"carrier": "UA", "depart": "08:00"},
         "american": {"carrier": "AA", "via": ["MIA"], "depart": "07:05"},
@@ -484,12 +496,13 @@ scenario(
         offer("american-economy", "american", "ECONOMY", 29800),
         offer("american-business", "american", "BUSINESS", 124000),
     ]),
-    expected("BOOK", ["united-business"], ["BUSINESS"], ["SENIOR_ROLE_ENTITLEMENT"],
-             on_file("ASSISTANT_SECRETARY_GENERAL"), SENIOR_CLAUSES + ["OWN_APPROVAL"]),
+    expected("BOOK", ["united-business"], ["BUSINESS"], SENIOR_PREMIUM,
+             on_file("ASSISTANT_SECRETARY_GENERAL") + ["SECRETARY_GENERAL"], CLASS_CLAUSES + ["OWN_APPROVAL"]),
     [TRAVEL_CLASS, CLASS, OWN],
     "Two exceptions meet: the Assistant Secretary General may approve his own travel request (lines 294-296, unlike "
     "every other traveller), and his tickets are not held to economy (145-146, 324-328). Business at its cheapest: "
-    "United at $1,150.")
+    "United at $1,150. The Secretary General's written approval of business is on file too (audit), so the reader "
+    "who applies 328-335 to the three officials books the same ticket.")
 
 scenario(
     "mango-quarry", "multi_rule", ["date_arithmetic", "month_end", "outside_air_section"], MEX_REQUEST,
@@ -523,12 +536,14 @@ scenario(
         offer("american-economy", "american", "ECONOMY", 19800),
         offer("united-economy", "united", "ECONOMY", 33800),
     ]),
-    expected("BOOK", ["united-economy"], ["ECONOMY"], ["ALTERNATE_ROUTE_WITHIN_MARGIN", "COMPARABLE_FARE_OPTION", "LOYALTY_PROGRAM_PREFERENCE"],
-             on_file("DIRECTOR"), PREFERENCE_CLAUSES + ["SELECTION_OF_CARRIER"]),
+    expected("BOOK", ["american-economy", "united-economy"], ["ECONOMY"],
+             ["ALTERNATE_ROUTE_WITHIN_MARGIN", "COMPARABLE_FARE_OPTION", "LOWEST_FARE", "LOYALTY_PROGRAM_PREFERENCE"],
+             on_file("DIRECTOR"), PREFERENCE_CLAUSES + ["SELECTION_OF_CARRIER"] + LOWEST_CLAUSES),
     [CARRIER, COMPARABLE, PREF, AUTH],
     "A request for a specific carrier is 'subject to the Personal Preference criteria' (lines 398-401). United costs "
     "$140 more than the lowest logical fare, 'not higher than $200', so it is a comparable option (166-167, 389-391) "
-    "and needs no extra justification: book United.",
+    "and needs no extra justification: book United. A reader who holds to 'Lowest available fares must be used "
+    "whenever possible' (161, 365) books American; the audit accepts both.",
     distractors=[FREQUENT])
 
 scenario(

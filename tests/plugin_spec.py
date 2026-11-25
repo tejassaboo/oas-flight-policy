@@ -49,7 +49,7 @@ ID_CATEGORY_ENUMS = [contract.Position, contract.Purpose, contract.Routing, cont
 # How many scenarios a degenerate agent may pass: one that always holds the right offer for approval, and
 # one that always books the cheapest seat (with the right section).
 MAX_PASS_ALWAYS_FLAG = 1
-MAX_PASS_ALWAYS_LOWEST = 7
+MAX_PASS_ALWAYS_LOWEST = 9
 
 # Hand-built duration cases: this handbook has no duration threshold (rules.DURATION_RULES is empty); its four-hour
 # limit is relative to the nonstop and is tested through the heron-pampa / ibis-knoll twins.

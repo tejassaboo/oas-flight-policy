@@ -367,12 +367,25 @@ def exempt(trip, travel, economy, roles):
                       f"rule; {notes}: {chosen.carrier} at {chosen.fare_cents} cents.")
     if trip.checked_bag_fees:
         raise ValueError("bag fees on a premium request are not modelled")
+    # Lines 328-335 go on: "Any requests for advance purchase by GS/OAS of a different class of service must be
+    # approved in advance and in writing by the Secretary General". Read as applying to everyone but the three, it
+    # adds nothing here; read as applying to them too, it calls for his written approval. Every premium request by
+    # one of the three carries that approval, so both readings book the cabin asked for.
+    forms = [form for form in signed(trip, SignOffSubject.PREMIUM_FARE_FORM)
+             if form.role == Approver.SECRETARY_GENERAL and form.cabin == trip.requested_cabin]
+    if len(forms) != 1:
+        raise ValueError("a senior official's premium request without the Secretary General's written approval is "
+                         "not modelled")
     wanted = [offer for offer in travel if offer.cabin == trip.requested_cabin]
     chosen = one(cheapest(wanted), "cheapest fare in the requested cabin")
-    return answer(Decision.BOOK, [chosen], [ReasonCode.SENIOR_ROLE_ENTITLEMENT], roles, clauses,
+    return answer(Decision.BOOK, [chosen], [ReasonCode.SENIOR_ROLE_ENTITLEMENT, ReasonCode.PREMIUM_FARE_AUTHORIZED],
+                  [*roles, Approver.SECRETARY_GENERAL],
+                  [*clauses, Clause.PREMIUM_TRAVEL, Clause.CABIN_EXCEPTIONS],
                   "Lines 145-146 and 324-328: tickets for the Secretary General, the Assistant Secretary General and "
                   "the Chair of the Permanent Council are not held to economy class, so the cabin asked for is booked "
-                  "at its cheapest fare; lines 294-296 let these three approve their own travel.")
+                  "at its cheapest fare; lines 294-296 let these three approve their own travel. The Secretary "
+                  "General's written approval of the cabin is on file as well (lines 328-335, 351-353), so the reader "
+                  "who applies that sentence to the three books the same ticket.")
 
 
 def premium_request(trip, travel, economy, roles):
@@ -447,12 +460,15 @@ def economy_request(trip, economy, roles):
         extra = preferred.fare_cents - llf.fare_cents
         if extra <= 0 or extra > ALLOWANCE_CENTS:
             raise ValueError("an airline request that is the lowest fare, or beyond the allowance, is not modelled")
-        return answer(Decision.BOOK, [preferred], [ReasonCode.COMPARABLE_FARE_OPTION, ReasonCode.LOYALTY_PROGRAM_PREFERENCE,
-                                                   ReasonCode.ALTERNATE_ROUTE_WITHIN_MARGIN],
-                      roles, [*PREFERENCE_CLAUSES, Clause.SELECTION_OF_CARRIER],
+        return answer(Decision.BOOK, [preferred, llf],
+                      [ReasonCode.COMPARABLE_FARE_OPTION, ReasonCode.LOYALTY_PROGRAM_PREFERENCE,
+                       ReasonCode.ALTERNATE_ROUTE_WITHIN_MARGIN, ReasonCode.LOWEST_FARE],
+                      roles, [*PREFERENCE_CLAUSES, Clause.SELECTION_OF_CARRIER, *LOWEST_CLAUSES],
                       f"Lines 398-401: a request for a specific carrier is subject to the personal preference criteria; "
                       f"lines 166-167 and 389-391: it costs {extra} cents more than the lowest logical fare, not more "
-                      f"than $200, so it is a comparable option and needs no extra justification: {preferred.carrier}.")
+                      f"than $200, so it is a comparable option and needs no extra justification: {preferred.carrier}. "
+                      f"A reader who holds to 'Lowest available fares must be used whenever possible' (lines 161, 365) "
+                      f"books the lowest logical fare instead, {llf.carrier}; both are accepted.")
     clauses = list(LOWEST_CLAUSES)
     reasons = [ReasonCode.LOWEST_FARE]
     if llf.stops:
@@ -493,11 +509,14 @@ def nonstop_request(trip, economy, llf, roles):
                       "$200 or more'). The two rules give different tickets at exactly $200 and the text does not say "
                       "which prevails; hold either offer.", phrase=UNCLEAR_PHRASE)
     if savings < SAVINGS_CENTS:
-        return answer(Decision.BOOK, [nonstop], [ReasonCode.ALTERNATE_ROUTE_WITHIN_MARGIN,
-                                                 ReasonCode.COMPARABLE_FARE_OPTION], roles, clauses,
+        return answer(Decision.BOOK, [nonstop, connection],
+                      [ReasonCode.ALTERNATE_ROUTE_WITHIN_MARGIN, ReasonCode.COMPARABLE_FARE_OPTION,
+                       ReasonCode.LOWEST_FARE, ReasonCode.COST_SAVINGS], roles, clauses,
                       f"Lines 166-167 and 389-391: the nonstop costs {savings} cents more than the lowest logical fare, "
                       "not more than $200, so it is a comparable option, and the connection saves less than $200, so "
-                      "it is not required (lines 167-169): the nonstop the traveller asks for.")
+                      "it is not required (lines 167-169): the nonstop the traveller asks for. A reader who holds to "
+                      "'Lowest available fares must be used whenever possible' (lines 161, 365) books the connection "
+                      "instead; both are accepted.")
     return answer(Decision.BOOK, [connection], [ReasonCode.COST_SAVINGS, ReasonCode.ALTERNATE_ROUTE_TOO_EXPENSIVE,
                                                 ReasonCode.LOWEST_FARE], roles, clauses,
                   f"Lines 167-169 and 391-393: the connection saves {savings} cents ($200 or more) and adds {extra} "

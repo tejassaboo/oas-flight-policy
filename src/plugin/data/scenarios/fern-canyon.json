@@ -95,6 +95,7 @@
   "expected": {
     "decision": "BOOK",
     "offer_slots": [
+      "dallas-economy",
       "nonstop-economy"
     ],
     "cabins": [
@@ -102,7 +103,9 @@
     ],
     "reason_codes": [
       "ALTERNATE_ROUTE_WITHIN_MARGIN",
-      "COMPARABLE_FARE_OPTION"
+      "COMPARABLE_FARE_OPTION",
+      "COST_SAVINGS",
+      "LOWEST_FARE"
     ],
     "approvers": [
       "NONE",
@@ -157,5 +160,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "The connection through Dallas ($310, 150 minutes longer, both leave 08:00) is the lowest logical fare. The nonstop costs $199 more: 'not higher than $200', so it is a comparable option (lines 166-167, 389-391), and a saving of $199 does not make the connection required (lines 167-169). The traveller's nonstop is booked."
+  "design_notes": "The connection through Dallas ($310, 150 minutes longer, both leave 08:00) is the lowest logical fare. The nonstop costs $199 more: 'not higher than $200', so it is a comparable option (lines 166-167, 389-391), and a saving of $199 does not make the connection required (lines 167-169). The traveller's nonstop is booked. A reader who holds to 'Lowest available fares must be used whenever possible' (161, 365) books the connection; the audit accepts both."
 }

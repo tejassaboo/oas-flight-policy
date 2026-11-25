@@ -9,7 +9,7 @@
   "twin_fact": "",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "Dulles to San Juan on April 26th for the Caribbean disaster-resilience summit the next morning. I signed my own travel request for this one. Business class, please.",
+  "request": "Dulles to San Juan on April 26th for the Caribbean disaster-resilience summit the next morning. I signed my own travel request for this one, and the Secretary General approved business class for it in writing. Business class, please.",
   "trip": {
     "traveller_name": "Nathaniel Brathwaite",
     "traveller_title": "Assistant Secretary General",
@@ -40,6 +40,14 @@
         "cabin": "NONE",
         "signed_on": "2027-03-08",
         "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      },
+      {
+        "role": "SECRETARY_GENERAL",
+        "name": "Ernesto Valdivia",
+        "subject": "PREMIUM_FARE_FORM",
+        "cabin": "BUSINESS",
+        "signed_on": "2027-03-05",
+        "covers": "Premium Fare Authorization Form: business class for this trip"
       }
     ]
   },
@@ -103,15 +111,19 @@
       "BUSINESS"
     ],
     "reason_codes": [
+      "PREMIUM_FARE_AUTHORIZED",
       "SENIOR_ROLE_ENTITLEMENT"
     ],
     "approvers": [
       "ASSISTANT_SECRETARY_GENERAL",
-      "NONE"
+      "NONE",
+      "SECRETARY_GENERAL"
     ],
     "clauses": [
+      "CABIN_EXCEPTIONS",
       "CLASS_OF_SERVICE",
       "OWN_APPROVAL",
+      "PREMIUM_TRAVEL",
       "TRAVEL_CLASS"
     ],
     "unclear_phrase": ""
@@ -146,5 +158,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Two exceptions meet: the Assistant Secretary General may approve his own travel request (lines 294-296, unlike every other traveller), and his tickets are not held to economy (145-146, 324-328). Business at its cheapest: United at $1,150."
+  "design_notes": "Two exceptions meet: the Assistant Secretary General may approve his own travel request (lines 294-296, unlike every other traveller), and his tickets are not held to economy (145-146, 324-328). Business at its cheapest: United at $1,150. The Secretary General's written approval of business is on file too (audit), so the reader who applies 328-335 to the three officials books the same ticket."
 }

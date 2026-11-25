@@ -81,6 +81,7 @@
   "expected": {
     "decision": "BOOK",
     "offer_slots": [
+      "american-economy",
       "united-economy"
     ],
     "cabins": [
@@ -89,6 +90,7 @@
     "reason_codes": [
       "ALTERNATE_ROUTE_WITHIN_MARGIN",
       "COMPARABLE_FARE_OPTION",
+      "LOWEST_FARE",
       "LOYALTY_PROGRAM_PREFERENCE"
     ],
     "approvers": [
@@ -96,10 +98,14 @@
       "NONE"
     ],
     "clauses": [
+      "CLASS_OF_SERVICE",
       "COMPARABLE_OPTIONS",
+      "LOWEST_LOGICAL_FARE",
+      "LOWEST_LOGICAL_FARE_DEFINITION",
       "PERSONAL_PREFERENCE",
       "PERSONAL_PREFERENCE_DEFINITION",
-      "SELECTION_OF_CARRIER"
+      "SELECTION_OF_CARRIER",
+      "TRAVEL_CLASS"
     ],
     "unclear_phrase": ""
   },
@@ -151,5 +157,5 @@
       "why": "miles are kept; it does not choose the fare"
     }
   ],
-  "design_notes": "A request for a specific carrier is 'subject to the Personal Preference criteria' (lines 398-401). United costs $140 more than the lowest logical fare, 'not higher than $200', so it is a comparable option (166-167, 389-391) and needs no extra justification: book United."
+  "design_notes": "A request for a specific carrier is 'subject to the Personal Preference criteria' (lines 398-401). United costs $140 more than the lowest logical fare, 'not higher than $200', so it is a comparable option (166-167, 389-391) and needs no extra justification: book United. A reader who holds to 'Lowest available fares must be used whenever possible' (161, 365) books American; the audit accepts both."
 }
