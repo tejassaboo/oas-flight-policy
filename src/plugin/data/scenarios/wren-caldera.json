@@ -1,0 +1,163 @@
+{
+  "id": "wren-caldera",
+  "category": "flag",
+  "overlays": [
+    "approval_required"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "dahlia-mesa",
+    "condor-flats"
+  ],
+  "ambiguity_note": "none: the Secretary General's approval of the form is required and missing; the text is clear",
+  "request": "Dulles to Sao Paulo on September 13th, overnight, for the anti-corruption follow-up meetings the next afternoon. The Chief of Staff signed my Premium Fare Authorization Form for business class on this trip because of my back. Business, please.",
+  "trip": {
+    "traveller_name": "Oscar Mejia-Ruiz",
+    "traveller_title": "Legal Officer",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department of Legal Cooperation, Secretariat for Legal Affairs",
+    "origin": "IAD",
+    "destination": "GRU",
+    "travel_date": "2027-09-13",
+    "business_travel_date": "2027-09-13",
+    "return_date": "",
+    "booking_date": "2027-07-26",
+    "work_starts": "2027-09-14 14:00",
+    "purpose": "Anti-corruption follow-up meetings in Sao Paulo",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Ines Albornoz",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-07-19",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      },
+      {
+        "role": "CHIEF_OF_STAFF",
+        "name": "Mariano Ocampo",
+        "subject": "PREMIUM_FARE_FORM",
+        "cabin": "BUSINESS",
+        "signed_on": "2027-07-22",
+        "covers": "Premium Fare Authorization Form: business class for this trip (medical certificate on file)"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "GRU",
+        "date": "2027-09-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "united": {
+            "carrier": "UA",
+            "depart": "21:30",
+            "minutes": [
+              595
+            ]
+          },
+          "latam": {
+            "carrier": "LA",
+            "depart": "22:10",
+            "minutes": [
+              600
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 99000
+          },
+          {
+            "slot": "united-business",
+            "flight": "united",
+            "cabin": "BUSINESS",
+            "fare_cents": 420000
+          },
+          {
+            "slot": "latam-economy",
+            "flight": "latam",
+            "cabin": "ECONOMY",
+            "fare_cents": 103000
+          },
+          {
+            "slot": "latam-business",
+            "flight": "latam",
+            "cabin": "BUSINESS",
+            "fare_cents": 395000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "latam-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "SECRETARY_GENERAL"
+    ],
+    "clauses": [
+      "CABIN_EXCEPTIONS",
+      "CLASS_OF_SERVICE",
+      "PREMIUM_TRAVEL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        351,
+        353
+      ],
+      "sha256": "0313e6e58d817dae4dfce79764ac84dec380683980372d07fb75348353c2f72f",
+      "quote": "6.3. Class of Service Exceptions: to process a request for exception, a filled Premium Fare Authorization Form must be approved by the Secretary General. The form is available on the OAS Intranet, under Procurement Services.",
+      "why": "the Premium Fare Authorization Form must be approved by the Secretary General"
+    },
+    {
+      "lines": [
+        149,
+        151
+      ],
+      "sha256": "88fabb7c43eba7985533707bf2d0ae8562f04687624b37df0d1b5a72e3361226",
+      "quote": "2.21 Premium Travel: travel completed by any means in a Travel Class other than Economy; this is considered an exception under this policy. To process a request for exception, a Premium Fare Authorization Form is available on the OAS Intranet, under Procurement Services.",
+      "why": "any class other than economy is an exception needing a Premium Fare Authorization Form"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The Premium Fare Authorization Form 'must be approved by the Secretary General' (lines 351-352; also 334-335); the Chief of Staff signed it. Hold the cheapest business fare for the Secretary General. Approval required, not 'no compliant offer'."
+}

@@ -1,0 +1,187 @@
+{
+  "id": "kapok-strand",
+  "category": "boundary_twin",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "jacaranda-cove",
+  "twin_fact": "Saturday's lowest fare is $201 or $200 above Monday's",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "My Bogota meetings start Tuesday morning, so the trip needs a flight on Monday, February 15th, but I'd like to fly out on Saturday the 13th and spend the weekend there at my own cost. I'll pay any difference in the fare. If leaving Saturday isn't allowed, book the Monday flight.",
+  "trip": {
+    "traveller_name": "Mateo Garzon",
+    "traveller_title": "Senior Legal Officer",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department of International Law, Secretariat for Legal Affairs",
+    "origin": "IAD",
+    "destination": "BOG",
+    "travel_date": "2027-02-13",
+    "business_travel_date": "2027-02-15",
+    "return_date": "",
+    "booking_date": "2026-12-28",
+    "work_starts": "2027-02-16 09:00",
+    "purpose": "Justice-sector cooperation meetings in Bogota (Tuesday to Thursday)",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": true,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Ana Lucia Prado",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2026-12-21",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      },
+      {
+        "role": "DIRECTOR",
+        "name": "Ana Lucia Prado",
+        "subject": "PERSONAL_DAYS",
+        "cabin": "NONE",
+        "signed_on": "2026-12-21",
+        "covers": "Personal days in Bogota on February 13-14 combined with the official trip; personal time and costs documented and paid by the traveller"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "saturday",
+        "origin": "IAD",
+        "destination": "BOG",
+        "date": "2027-02-13",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "avianca": {
+            "carrier": "AV",
+            "depart": "08:30"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "10:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "saturday-avianca",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 58100
+          },
+          {
+            "slot": "saturday-united",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 64000
+          }
+        ]
+      },
+      {
+        "name": "monday",
+        "origin": "IAD",
+        "destination": "BOG",
+        "date": "2027-02-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "avianca": {
+            "carrier": "AV",
+            "depart": "08:30"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "10:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "monday-avianca",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 38000
+          },
+          {
+            "slot": "monday-united",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 45500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "monday-avianca"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_TOO_EXPENSIVE",
+      "PERSONAL_CHANGE_NOT_ALLOWED",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE"
+    ],
+    "clauses": [
+      "COMPARABLE_OPTIONS",
+      "OFFICIAL_WITH_PERSONAL",
+      "PERMISSIBLE_CHANGES",
+      "PERSONAL_COSTS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        573,
+        583
+      ],
+      "sha256": "ba72c0fc34250a2f8ac9ad9059bff49c5a592a705dc4fdc1e071d75f43e6d28e",
+      "quote": "8.1. Official Travel Combined with Personal Trip: at times a traveler/passenger may wish to combine personal activity in connection with a business trip. Business and personal travel may be combined if prior authorization is obtained from either the Director or the Secretary of the requesting area. The GS/OAS will accommodate these requests provided that the personal related time and expenses are clearly documented, separated and paid for by the individual, and the business objective for the travel remains unaffected. It is the traveler's responsibility to document any differences (cost, time, etc.) and the GS/OAS will not be responsible for undocumented cases. Travelers need to justify in writing even if there are no additional travel costs related to personal changes or if those changes make the official travel less expensive. See Administrative Memorandum 79 at section A. 10.",
+      "why": "official and personal travel may be combined with the Director's or Secretary's prior authorization; personal costs are documented and paid by the traveller"
+    },
+    {
+      "lines": [
+        585,
+        592
+      ],
+      "sha256": "6fb53943bf093b3f6439b13fe02b2eb1e9ea4338b541fa42c6c9036d78ee9e1c",
+      "quote": "8.1.1. Permissible changes: personal changes will only be allowed if the official itinerary remains unchanged. For the purpose of this policy, the use of different hubs and date changes to arrive to same destination(s) will be allowed, provided that these changes do not increase the fare cost beyond the comparable options. For any other changes (i.e.: a different destination, add legs, etc.) the traveler will have to wait until the ticket is issued and make changes to the confirmed reservation. Changes at this point should also be made through the designated TMC. Please note that the clause of \"Reservations modified by outside Agents\" in this policy will apply.",
+      "why": "date changes for personal days are allowed if they do not increase the fare beyond the comparable options"
+    },
+    {
+      "lines": [
+        166,
+        173
+      ],
+      "sha256": "7b4a4c1f9b15825e01d5e19397920489315646fc81c09879a5eb3f9f8e7cde16",
+      "quote": "2.26 Comparable Options: options will be comparable as long as the total cost for alternative fares are not higher than $2002 when compared to the LLF. Alternative options, routes, stops or connecting flights will be required if savings of $200 or more can be achieved without extending the total one- way air travel time by more than four (4) hours. The GS/OAS and the designated TMC will always use caution to ensure that savings will not compromise convenience, business purpose, or safety. Travelers will be allowed to use their judgment and complete travel even when the alternative options exceed this allowance. Those cases will be reported and may require additional justification.",
+      "why": "options within $200 of the lowest logical fare are comparable; connections are required when they save $200 or more without adding more than four hours ('$2002' is $200 and footnote 2)"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Saturday's lowest fare is now $201 above Monday's, beyond the comparable options (lines 166-167), so the date change is not allowed at booking (585-590), even with the traveller paying. The request's fallback: Monday's lowest fare, Avianca at $380."
+}

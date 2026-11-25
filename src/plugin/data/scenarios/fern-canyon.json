@@ -1,0 +1,161 @@
+{
+  "id": "fern-canyon",
+  "category": "boundary_twin",
+  "overlays": [
+    "multi_leg",
+    "dearer_option"
+  ],
+  "twin_of": "guava-ledge",
+  "twin_fact": "the nonstop costs $199 or $201 more than the connection",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Dulles to Los Angeles on March 15th for the cybersecurity forum, which opens the next morning. I'd rather fly nonstop, if the policy lets me have it without any extra justification; if not, book what the policy calls for.",
+  "trip": {
+    "traveller_name": "Daniel Achterberg",
+    "traveller_title": "Program Officer",
+    "position": "STAFF_MEMBER",
+    "works_for": "Inter-American Committee against Terrorism, Secretariat for Multidimensional Security",
+    "origin": "IAD",
+    "destination": "LAX",
+    "travel_date": "2027-03-15",
+    "business_travel_date": "2027-03-15",
+    "return_date": "",
+    "booking_date": "2027-01-25",
+    "work_starts": "2027-03-16 09:00",
+    "purpose": "Inter-American cybersecurity forum in Los Angeles",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "NONSTOP",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "SECRETARY",
+        "name": "Farah Mendoza-Lyle",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-01-20",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "LAX",
+        "date": "2027-03-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "nonstop": {
+            "carrier": "UA",
+            "depart": "08:00",
+            "minutes": [
+              330
+            ]
+          },
+          "dallas": {
+            "carrier": "AA",
+            "via": [
+              "DFW"
+            ],
+            "depart": "08:00",
+            "minutes": [
+              200,
+              200
+            ],
+            "layovers": [
+              80
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "nonstop-economy",
+            "flight": "nonstop",
+            "cabin": "ECONOMY",
+            "fare_cents": 50900
+          },
+          {
+            "slot": "dallas-economy",
+            "flight": "dallas",
+            "cabin": "ECONOMY",
+            "fare_cents": 31000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "nonstop-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_WITHIN_MARGIN",
+      "COMPARABLE_FARE_OPTION"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY"
+    ],
+    "clauses": [
+      "COMPARABLE_OPTIONS",
+      "CONNECTIONS",
+      "LOWEST_LOGICAL_FARE",
+      "LOWEST_LOGICAL_FARE_DEFINITION",
+      "PERSONAL_PREFERENCE",
+      "PERSONAL_PREFERENCE_DEFINITION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        166,
+        173
+      ],
+      "sha256": "7b4a4c1f9b15825e01d5e19397920489315646fc81c09879a5eb3f9f8e7cde16",
+      "quote": "2.26 Comparable Options: options will be comparable as long as the total cost for alternative fares are not higher than $2002 when compared to the LLF. Alternative options, routes, stops or connecting flights will be required if savings of $200 or more can be achieved without extending the total one- way air travel time by more than four (4) hours. The GS/OAS and the designated TMC will always use caution to ensure that savings will not compromise convenience, business purpose, or safety. Travelers will be allowed to use their judgment and complete travel even when the alternative options exceed this allowance. Those cases will be reported and may require additional justification.",
+      "why": "options within $200 of the lowest logical fare are comparable; connections are required when they save $200 or more without adding more than four hours ('$2002' is $200 and footnote 2)"
+    },
+    {
+      "lines": [
+        387,
+        396
+      ],
+      "sha256": "9977cf8294f2acf0347313ce497e4cc575beba7dde0271f0ccc4fa25587f40d6",
+      "quote": "6.7. Personal preference: within this policy, if LLF as presented by the designated TMC is not selected by the traveler in lieu of a different alternative, this change will be reported as \"personal preference\". Please note that the TMC should provide travelers with all available options. These options will be comparable as long as the total cost for alternative fares are not higher than $200 when compared to the LLF. Alternative options, routes, stops or connecting flights will be required if savings of $200 or more can be achieved without extending the total one-way air travel time by more than four (4) hours. Travelers will be allowed to use their judgment and complete travel even when the alternative options exceed this personal preference allowance. Those cases will continue to be reported to the Department of Procurement and may be subject to additional justification.",
+      "why": "personal preference: comparable within $200; connections required when they save $200 or more within four hours; beyond the allowance the case is reported and may need justification"
+    },
+    {
+      "lines": [
+        185,
+        186
+      ],
+      "sha256": "429d1f13fc0bd2dfe6995c58dfe9d4a0e36c8dc3bdf496477a641e8358ecd854",
+      "quote": "2 The amount of US$200 is based on industry standards that would be revised and updated by the Department of Procurement on a periodic or as-needed basis.",
+      "why": "footnote 2: the amount is US$200"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The connection through Dallas ($310, 150 minutes longer, both leave 08:00) is the lowest logical fare. The nonstop costs $199 more: 'not higher than $200', so it is a comparable option (lines 166-167, 389-391), and a saving of $199 does not make the connection required (lines 167-169). The traveller's nonstop is booked."
+}

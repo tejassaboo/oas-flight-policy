@@ -1,0 +1,149 @@
+{
+  "id": "yucca-strait",
+  "category": "flag",
+  "overlays": [
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section",
+    "approval_required"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "egret-shoal",
+    "mango-quarry"
+  ],
+  "ambiguity_note": "none: the additional written approval for a late purchase is required and missing; the text is clear",
+  "request": "Dulles to Mexico City on Monday, January 4th, for the electoral observation planning meetings that start Tuesday morning. Please book my flight.",
+  "trip": {
+    "traveller_name": "Rosa Quintanilla",
+    "traveller_title": "Electoral Specialist",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department for Electoral Cooperation and Observation",
+    "origin": "IAD",
+    "destination": "MEX",
+    "travel_date": "2027-01-04",
+    "business_travel_date": "2027-01-04",
+    "return_date": "",
+    "booking_date": "2026-12-15",
+    "work_starts": "2027-01-05 09:00",
+    "purpose": "Electoral observation planning meetings in Mexico City",
+    "purpose_kind": "MISSION",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Tomas Arrieta",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2026-12-15",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "MEX",
+        "date": "2027-01-04",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aeromexico": {
+            "carrier": "AM",
+            "depart": "09:10"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "11:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aeromexico-economy",
+            "flight": "aeromexico",
+            "cabin": "ECONOMY",
+            "fare_cents": 41200
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 44700
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "aeromexico-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ADVANCE_PURCHASE_TOO_LATE",
+      "APPROVAL_REQUIRED"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "SECRETARY"
+    ],
+    "clauses": [
+      "ADVANCE_TIMELINESS",
+      "TRAVEL_ARRANGEMENTS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        278,
+        284
+      ],
+      "sha256": "591647fa2f78e9b3b4bc2d67782f5ae35b04c84c2d525ea61a52d29f3307dfe9",
+      "quote": "5.2. Advance Authorization - Timeliness: under normal circumstances and as required by other applicable regulations, Quarterly Travel Plans should be prepared and approved in advance every quarter. As a general rule and according to reasonable travel industry standards, travel plans should be approved no later than three (3) weeks prior to the travel date and all travel plans should be approved no later than fifteen (15) days before the beginning of the following quarter. Fares purchased late are normally more expensive and would therefore require additional written approval from the duly authorized official in the requesting area.",
+      "why": "travel plans approved no later than three weeks before travel; late purchases need additional written approval from the duly authorized official in the requesting area"
+    },
+    {
+      "lines": [
+        84,
+        85
+      ],
+      "sha256": "0176949baeee02dc1c03cd684965c5d0a6805dc29c4ceaea1ce7df3595656ba1",
+      "quote": "2.5 Authorized Approver: under this travel policy, the corresponding area's highest authority (Director or Secretary, Chief of Staff or Secretary General) is only allowed to provide travel authorizations.",
+      "why": "the area's highest authority (Director or Secretary, Chief of Staff or Secretary General) gives travel authorizations"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        314,
+        316
+      ],
+      "quote": "should be paid to travelers by the DFAMS one week before the travel date",
+      "why": "a date rule for per diem advances, not for approvals or fares"
+    }
+  ],
+  "design_notes": "Authorized on December 15 for travel on January 4: 20 days, later than 'three (3) weeks prior to the travel date' (lines 280-281). 'Fares purchased late ... would therefore require additional written approval from the duly authorized official in the requesting area' (283-284): the Director or Secretary (84-85). None is on file, so hold the lowest logical fare, Aeromexico at $412."
+}

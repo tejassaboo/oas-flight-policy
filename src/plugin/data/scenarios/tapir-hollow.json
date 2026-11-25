@@ -1,0 +1,113 @@
+{
+  "id": "tapir-hollow",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Could you book my holiday flight, Dulles to Mexico City on December 23rd? It's a family vacation over the holidays, nothing to do with work; I'll be on annual leave.",
+  "trip": {
+    "traveller_name": "Lena Fischer-Ruiz",
+    "traveller_title": "Budget Analyst",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department of Financial and Administrative Management Services",
+    "origin": "IAD",
+    "destination": "MEX",
+    "travel_date": "2026-12-23",
+    "business_travel_date": "2026-12-23",
+    "return_date": "",
+    "booking_date": "2026-11-24",
+    "work_starts": "",
+    "purpose": "Family vacation in Mexico City during annual leave",
+    "purpose_kind": "VACATION",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "MEX",
+        "date": "2026-12-23",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aeromexico": {
+            "carrier": "AM",
+            "depart": "09:10"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "11:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aeromexico-economy",
+            "flight": "aeromexico",
+            "cabin": "ECONOMY",
+            "fare_cents": 38000
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 41000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "NONE"
+    ],
+    "clauses": [
+      "PERSONAL_VACATION"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        719,
+        727
+      ],
+      "sha256": "5236b008d14f740de8780355956c0dabed43d8d2c009c4c4407597f6634a2a96",
+      "quote": "12. Personal/Vacation Travel Personal travel not associated with GS/OAS official travel trip can be made through the leisure section of the designated TMC. If available, the TMC may be able to extend as a personal benefit, any corporate discounts negotiated by the GS/OAS or the Department of Procurement. However, the TMC corporate travel agents should not be used to book leisure trips. All costs associated with these personal arrangements will be at the traveler's expense and considered non-reimbursable. This includes any TMC service and/or transaction fees. Personal airfares and service fees will be charged to the traveler's personal credit card.",
+      "why": "personal travel is at the traveller's expense and not booked by the corporate agents"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        708,
+        708
+      ],
+      "quote": "Groups are defined as council meetings, conferences or events that involve 10 or more individuals.",
+      "why": "a group definition; one traveller is not a group"
+    }
+  ],
+  "design_notes": "Section 12 (lines 719-727): personal travel not associated with official travel goes through the travel agency's leisure section, 'the TMC corporate travel agents should not be used to book leisure trips', and all costs are the traveller's. The GS/OAS buys no ticket."
+}

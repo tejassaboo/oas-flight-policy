@@ -1,0 +1,181 @@
+{
+  "id": "sisal-crest",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm going to Bogota on June 14th as adviser to the Chair of the Permanent Council for the consultations that open the next morning. The Chair is flying business; put me in business with her if that's allowed, otherwise book what the policy allows.",
+  "trip": {
+    "traveller_name": "Tomas Villalobos",
+    "traveller_title": "Adviser to the Chair of the Permanent Council",
+    "position": "ADVISER",
+    "works_for": "Secretariat of the Permanent Council",
+    "origin": "IAD",
+    "destination": "BOG",
+    "travel_date": "2027-06-14",
+    "business_travel_date": "2027-06-14",
+    "return_date": "",
+    "booking_date": "2027-04-26",
+    "work_starts": "2027-06-15 09:00",
+    "purpose": "Consultations of the Permanent Council in Bogota",
+    "purpose_kind": "MISSION",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Beatriz Solano",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-04-21",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "BOG",
+        "date": "2027-06-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "avianca": {
+            "carrier": "AV",
+            "depart": "08:30"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "10:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "avianca-economy",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 39500
+          },
+          {
+            "slot": "avianca-business",
+            "flight": "avianca",
+            "cabin": "BUSINESS",
+            "fare_cents": 165000
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 43000
+          },
+          {
+            "slot": "united-business",
+            "flight": "united",
+            "cabin": "BUSINESS",
+            "fare_cents": 172000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "avianca-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ECONOMY_CLASS_REQUIRED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE"
+    ],
+    "clauses": [
+      "CABIN_EXCEPTIONS",
+      "CLASS_OF_SERVICE",
+      "PREMIUM_TRAVEL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        145,
+        148
+      ],
+      "sha256": "be71c0665f1e7d89168f5b55a6c7d0da5b961a4bd4bfbc9e21013ce6ecf9dd64",
+      "quote": "2.20 Travel Class: With the exception of the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council, all GS/OAS Official Travel should be carried in Coach/Economy Class at the lowest logical fare. It should be reported to the Permanent Council on a quarterly basis any instance of noncompliance with this rule.",
+      "why": "economy at the lowest logical fare for all but the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    },
+    {
+      "lines": [
+        149,
+        151
+      ],
+      "sha256": "88fabb7c43eba7985533707bf2d0ae8562f04687624b37df0d1b5a72e3361226",
+      "quote": "2.21 Premium Travel: travel completed by any means in a Travel Class other than Economy; this is considered an exception under this policy. To process a request for exception, a Premium Fare Authorization Form is available on the OAS Intranet, under Procurement Services.",
+      "why": "any class other than economy is an exception needing a Premium Fare Authorization Form"
+    },
+    {
+      "lines": [
+        351,
+        353
+      ],
+      "sha256": "0313e6e58d817dae4dfce79764ac84dec380683980372d07fb75348353c2f72f",
+      "quote": "6.3. Class of Service Exceptions: to process a request for exception, a filled Premium Fare Authorization Form must be approved by the Secretary General. The form is available on the OAS Intranet, under Procurement Services.",
+      "why": "the Premium Fare Authorization Form must be approved by the Secretary General"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        330,
+        332
+      ],
+      "quote": "with the exception of air travel by the chairman of the Permanent Council",
+      "why": "the exception names the Chair alone, not the Chair's delegation"
+    },
+    {
+      "lines": [
+        630,
+        632
+      ],
+      "quote": "the maximum number of GS/OAS Staff/Employees who can travel together on a single aircraft",
+      "why": "a limit with no number, for DP to apply; two travellers are not a group"
+    }
+  ],
+  "design_notes": "The exception is for tickets 'purchased for travel by' the Chair herself (lines 324-328, 145-146); her adviser is held to economy and has no Premium Fare form. The rules on employees flying together (8.5) set no class. Avianca economy at $395."
+}

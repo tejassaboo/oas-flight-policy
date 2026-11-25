@@ -1,0 +1,165 @@
+{
+  "id": "egret-shoal",
+  "category": "easy",
+  "overlays": [
+    "date_arithmetic",
+    "month_end",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Dulles to Mexico City on Monday, January 4th, for the electoral observation planning meetings that start Tuesday morning. Please book my flight.",
+  "trip": {
+    "traveller_name": "Rosa Quintanilla",
+    "traveller_title": "Electoral Specialist",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department for Electoral Cooperation and Observation",
+    "origin": "IAD",
+    "destination": "MEX",
+    "travel_date": "2027-01-04",
+    "business_travel_date": "2027-01-04",
+    "return_date": "",
+    "booking_date": "2026-12-14",
+    "work_starts": "2027-01-05 09:00",
+    "purpose": "Electoral observation planning meetings in Mexico City",
+    "purpose_kind": "MISSION",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Tomas Arrieta",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2026-12-14",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "MEX",
+        "date": "2027-01-04",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aeromexico": {
+            "carrier": "AM",
+            "depart": "09:10"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "11:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aeromexico-economy",
+            "flight": "aeromexico",
+            "cabin": "ECONOMY",
+            "fare_cents": 41200
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 44700
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "aeromexico-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE"
+    ],
+    "clauses": [
+      "ADVANCE_TIMELINESS",
+      "CLASS_OF_SERVICE",
+      "LOWEST_LOGICAL_FARE",
+      "LOWEST_LOGICAL_FARE_DEFINITION",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        145,
+        148
+      ],
+      "sha256": "be71c0665f1e7d89168f5b55a6c7d0da5b961a4bd4bfbc9e21013ce6ecf9dd64",
+      "quote": "2.20 Travel Class: With the exception of the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council, all GS/OAS Official Travel should be carried in Coach/Economy Class at the lowest logical fare. It should be reported to the Permanent Council on a quarterly basis any instance of noncompliance with this rule.",
+      "why": "economy at the lowest logical fare for all but the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    },
+    {
+      "lines": [
+        363,
+        366
+      ],
+      "sha256": "c25d2103391cc176f43e44f50729317295414d02cb3497e460dc94c785f7899d",
+      "quote": "Some LLF may require at least one stop or layover. Lowest available fares must be used whenever possible.",
+      "why": "the lowest logical fare; lowest available fares whenever possible"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    },
+    {
+      "lines": [
+        278,
+        284
+      ],
+      "sha256": "591647fa2f78e9b3b4bc2d67782f5ae35b04c84c2d525ea61a52d29f3307dfe9",
+      "quote": "5.2. Advance Authorization - Timeliness: under normal circumstances and as required by other applicable regulations, Quarterly Travel Plans should be prepared and approved in advance every quarter. As a general rule and according to reasonable travel industry standards, travel plans should be approved no later than three (3) weeks prior to the travel date and all travel plans should be approved no later than fifteen (15) days before the beginning of the following quarter. Fares purchased late are normally more expensive and would therefore require additional written approval from the duly authorized official in the requesting area.",
+      "why": "travel plans approved no later than three weeks before travel; late purchases need additional written approval from the duly authorized official in the requesting area"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        314,
+        316
+      ],
+      "quote": "should be paid to travelers by the DFAMS one week before the travel date",
+      "why": "a date rule for per diem advances, not for approvals or fares"
+    }
+  ],
+  "design_notes": "Authorized on December 14 for travel on January 4: 21 days, which is 'no later than three (3) weeks prior to the travel date' (lines 280-281), so the purchase is not late. The lowest logical fare: Aeromexico at $412."
+}

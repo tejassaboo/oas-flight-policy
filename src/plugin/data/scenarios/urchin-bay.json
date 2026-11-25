@@ -1,0 +1,131 @@
+{
+  "id": "urchin-bay",
+  "category": "refusal",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "The Inter-American Development Bank has already bought my round trip to Santiago for its conference, out March 1st and back March 6th. The OAS asked me to present at our own workshop in Santiago on March 5th, while I'm there. Please book whatever the OAS needs to buy for me to attend.",
+  "trip": {
+    "traveller_name": "Carlos Benitez",
+    "traveller_title": "Senior Specialist, Department of Effective Public Management",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department of Effective Public Management",
+    "origin": "IAD",
+    "destination": "SCL",
+    "travel_date": "2027-03-01",
+    "business_travel_date": "2027-03-01",
+    "return_date": "",
+    "booking_date": "2027-01-11",
+    "work_starts": "2027-03-05 09:00",
+    "purpose": "OAS public-management workshop in Santiago on March 5",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "Round trip Dulles - Santiago bought by the Inter-American Development Bank: out March 1, back March 6",
+    "ticket_from_others_suffices": true,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Ruth Kagame-Silva",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-01-06",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "SCL",
+        "date": "2027-03-01",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "latam": {
+            "carrier": "LA",
+            "depart": "21:10"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "22:05"
+          }
+        },
+        "offers": [
+          {
+            "slot": "latam-economy",
+            "flight": "latam",
+            "cabin": "ECONOMY",
+            "fare_cents": 99000
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 105000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "THIRD_PARTY_TICKET_COVERS_TRIP"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE"
+    ],
+    "clauses": [
+      "THIRD_PARTY_DEVIATIONS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        602,
+        606
+      ],
+      "sha256": "3b838ab43917241074742010a4533451a898ffde82522ab3ffab3fba84a78701",
+      "quote": "8.2. Deviations from Travel Plans paid by Third Parties: if passenger is travelling or has already scheduled travel plans for non-GS/OAS official travel, payment for the portion related to GS/OAS Official travel should only cover any additional expenses paid to deviate from the original travel plans. In no case, the GS/OAS portion should exceed the cost(s) of what the GS/OAS would pay if the initial travel plans did not exist.",
+      "why": "when travel is already paid by a third party, the GS/OAS covers only the added cost of deviating"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        197,
+        199
+      ],
+      "quote": "within thirty (30) days of their estimated return travel date",
+      "why": "an expense-claim deadline"
+    }
+  ],
+  "design_notes": "Section 8.2 (lines 602-606): when the traveller already has travel plans paid by a third party, the GS/OAS pays only 'additional expenses paid to deviate from the original travel plans'. The IDB ticket already takes him to Santiago and home around the March 5 workshop, so there is nothing for the GS/OAS to buy. The Director's authorization is on file but unused (rule 4(b))."
+}

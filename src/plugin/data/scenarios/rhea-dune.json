@@ -1,0 +1,155 @@
+{
+  "id": "rhea-dune",
+  "category": "distractor",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Washington National to Orlando on February 22nd for the tourism ministers' meeting the next morning. Economy is fine; book the lowest fare. JetBlue would charge me $35 for my checked bag and American includes one on this fare, in case that matters.",
+  "trip": {
+    "traveller_name": "Amb. Lucia Ferreyra",
+    "traveller_title": "Chair of the Permanent Council",
+    "position": "PERMANENT_COUNCIL_CHAIR",
+    "works_for": "Permanent Council of the OAS",
+    "origin": "DCA",
+    "destination": "MCO",
+    "travel_date": "2027-02-22",
+    "business_travel_date": "2027-02-22",
+    "return_date": "",
+    "booking_date": "2027-01-04",
+    "work_starts": "2027-02-23 09:00",
+    "purpose": "Inter-American meeting of tourism ministers in Orlando",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "JetBlue: $35 for the first checked bag; American: first checked bag included on this fare",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "CHIEF_OF_STAFF",
+        "name": "Mariano Ocampo",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-01-04",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "DCA",
+        "destination": "MCO",
+        "date": "2027-02-22",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "jetblue": {
+            "carrier": "B6",
+            "depart": "07:20"
+          },
+          "american": {
+            "carrier": "AA",
+            "depart": "09:35"
+          }
+        },
+        "offers": [
+          {
+            "slot": "jetblue-economy",
+            "flight": "jetblue",
+            "cabin": "ECONOMY",
+            "fare_cents": 13900
+          },
+          {
+            "slot": "american-economy",
+            "flight": "american",
+            "cabin": "ECONOMY",
+            "fare_cents": 15200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "jetblue-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ANCILLARY_FEES_EXCLUDED",
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "CHIEF_OF_STAFF",
+      "NONE"
+    ],
+    "clauses": [
+      "ANCILLARY_FEES",
+      "CLASS_OF_SERVICE",
+      "LOWEST_LOGICAL_FARE",
+      "LOWEST_LOGICAL_FARE_DEFINITION",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        425,
+        430
+      ],
+      "sha256": "010f202291471c5218e87c421703e86a89a5009188a52d10d05ef2c71820c352",
+      "quote": "6.11. Airline Ancillary Services Fees: although ancillary fees are a fairly new component, most major airlines have introduced them over the last few years. Some of these fees may have the potential to increase the cost of air travel. For the purpose of determining the LLF, airline ancillary service fees (including baggage) should not be included. Ancillary service fees for a first and/or second baggage should be considered reimbursable travel expenses and should be processed separately, when possible.",
+      "why": "ancillary fees, baggage included, are not counted when finding the lowest logical fare"
+    },
+    {
+      "lines": [
+        363,
+        366
+      ],
+      "sha256": "c25d2103391cc176f43e44f50729317295414d02cb3497e460dc94c785f7899d",
+      "quote": "Some LLF may require at least one stop or layover. Lowest available fares must be used whenever possible.",
+      "why": "the lowest logical fare; lowest available fares whenever possible"
+    },
+    {
+      "lines": [
+        145,
+        148
+      ],
+      "sha256": "be71c0665f1e7d89168f5b55a6c7d0da5b961a4bd4bfbc9e21013ce6ecf9dd64",
+      "quote": "2.20 Travel Class: With the exception of the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council, all GS/OAS Official Travel should be carried in Coach/Economy Class at the lowest logical fare. It should be reported to the Permanent Council on a quarterly basis any instance of noncompliance with this rule.",
+      "why": "economy at the lowest logical fare for all but the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        355,
+        357
+      ],
+      "quote": "the TMC is required to match any price for itinerary that a traveler may find elsewhere",
+      "why": "a price match on an identical itinerary, which the request does not raise"
+    }
+  ],
+  "design_notes": "The Chair may fly another class (lines 145-146) but asks for the lowest economy fare. 'For the purpose of determining the LLF, airline ancillary service fees (including baggage) should not be included' (lines 427-428), and bag fees are reimbursed separately (428-430): JetBlue's $139 is the lowest fare, whatever the bag costs."
+}

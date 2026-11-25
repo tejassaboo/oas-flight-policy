@@ -1,0 +1,184 @@
+{
+  "id": "ocelot-spire",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Dulles to Los Angeles on May 3rd; I present at the Pacific trade forum at 9 the next morning. The Secretary General approved my Premium Fare Authorization Form for business class on this trip. First class is only about $300 more on the United nonstop, so could you put me in first? If the form doesn't cover that, book what it does cover.",
+  "trip": {
+    "traveller_name": "Simone Adeyemi",
+    "traveller_title": "Trade Policy Advisor",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department of Economic Development",
+    "origin": "IAD",
+    "destination": "LAX",
+    "travel_date": "2027-05-03",
+    "business_travel_date": "2027-05-03",
+    "return_date": "",
+    "booking_date": "2027-03-15",
+    "work_starts": "2027-05-04 09:00",
+    "purpose": "Pacific trade forum in Los Angeles",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "FIRST",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Gabriel Monteiro",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-03-10",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      },
+      {
+        "role": "SECRETARY_GENERAL",
+        "name": "Ernesto Valdivia",
+        "subject": "PREMIUM_FARE_FORM",
+        "cabin": "BUSINESS",
+        "signed_on": "2027-03-12",
+        "covers": "Premium Fare Authorization Form: business class for this trip (medical certificate on file)"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "LAX",
+        "date": "2027-05-03",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "united": {
+            "carrier": "UA",
+            "depart": "08:15"
+          },
+          "american": {
+            "carrier": "AA",
+            "via": [
+              "DFW"
+            ],
+            "depart": "07:00"
+          }
+        },
+        "offers": [
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 31000
+          },
+          {
+            "slot": "united-business",
+            "flight": "united",
+            "cabin": "BUSINESS",
+            "fare_cents": 98000
+          },
+          {
+            "slot": "united-first",
+            "flight": "united",
+            "cabin": "FIRST",
+            "fare_cents": 129000
+          },
+          {
+            "slot": "american-economy",
+            "flight": "american",
+            "cabin": "ECONOMY",
+            "fare_cents": 29000
+          },
+          {
+            "slot": "american-business",
+            "flight": "american",
+            "cabin": "BUSINESS",
+            "fare_cents": 104000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "united-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "PREMIUM_FARE_AUTHORIZED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE",
+      "SECRETARY_GENERAL"
+    ],
+    "clauses": [
+      "CABIN_EXCEPTIONS",
+      "CLASS_OF_SERVICE",
+      "PREMIUM_TRAVEL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        149,
+        151
+      ],
+      "sha256": "88fabb7c43eba7985533707bf2d0ae8562f04687624b37df0d1b5a72e3361226",
+      "quote": "2.21 Premium Travel: travel completed by any means in a Travel Class other than Economy; this is considered an exception under this policy. To process a request for exception, a Premium Fare Authorization Form is available on the OAS Intranet, under Procurement Services.",
+      "why": "any class other than economy is an exception needing a Premium Fare Authorization Form"
+    },
+    {
+      "lines": [
+        351,
+        353
+      ],
+      "sha256": "0313e6e58d817dae4dfce79764ac84dec380683980372d07fb75348353c2f72f",
+      "quote": "6.3. Class of Service Exceptions: to process a request for exception, a filled Premium Fare Authorization Form must be approved by the Secretary General. The form is available on the OAS Intranet, under Procurement Services.",
+      "why": "the Premium Fare Authorization Form must be approved by the Secretary General"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        413,
+        416
+      ],
+      "quote": "upgrades to other than Economy Class using personal funds, points, miles and similar programs are allowed under this policy but they are not encouraged",
+      "why": "upgrades with the traveller's own miles: not a cabin the GS/OAS buys"
+    }
+  ],
+  "design_notes": "The Secretary General's approved form covers business (lines 149-151, 351-353); first is another class with no approved form, so it is not bought. The request's fallback: the cheapest business fare, United at $980."
+}

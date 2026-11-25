@@ -1,0 +1,150 @@
+{
+  "id": "llama-terrace",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Dulles to San Juan on April 26th for the Caribbean disaster-resilience summit the next morning. I signed my own travel request for this one. Business class, please.",
+  "trip": {
+    "traveller_name": "Nathaniel Brathwaite",
+    "traveller_title": "Assistant Secretary General",
+    "position": "ASSISTANT_SECRETARY_GENERAL",
+    "works_for": "Office of the Assistant Secretary General",
+    "origin": "IAD",
+    "destination": "SJU",
+    "travel_date": "2027-04-26",
+    "business_travel_date": "2027-04-26",
+    "return_date": "",
+    "booking_date": "2027-03-08",
+    "work_starts": "2027-04-27 09:00",
+    "purpose": "Caribbean disaster-resilience summit in San Juan",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "ASSISTANT_SECRETARY_GENERAL",
+        "name": "Nathaniel Brathwaite",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-03-08",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "SJU",
+        "date": "2027-04-26",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "united": {
+            "carrier": "UA",
+            "depart": "08:00"
+          },
+          "american": {
+            "carrier": "AA",
+            "via": [
+              "MIA"
+            ],
+            "depart": "07:05"
+          }
+        },
+        "offers": [
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 31500
+          },
+          {
+            "slot": "united-business",
+            "flight": "united",
+            "cabin": "BUSINESS",
+            "fare_cents": 115000
+          },
+          {
+            "slot": "american-economy",
+            "flight": "american",
+            "cabin": "ECONOMY",
+            "fare_cents": 29800
+          },
+          {
+            "slot": "american-business",
+            "flight": "american",
+            "cabin": "BUSINESS",
+            "fare_cents": 124000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "united-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "SENIOR_ROLE_ENTITLEMENT"
+    ],
+    "approvers": [
+      "ASSISTANT_SECRETARY_GENERAL",
+      "NONE"
+    ],
+    "clauses": [
+      "CLASS_OF_SERVICE",
+      "OWN_APPROVAL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        145,
+        148
+      ],
+      "sha256": "be71c0665f1e7d89168f5b55a6c7d0da5b961a4bd4bfbc9e21013ce6ecf9dd64",
+      "quote": "2.20 Travel Class: With the exception of the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council, all GS/OAS Official Travel should be carried in Coach/Economy Class at the lowest logical fare. It should be reported to the Permanent Council on a quarterly basis any instance of noncompliance with this rule.",
+      "why": "economy at the lowest logical fare for all but the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    },
+    {
+      "lines": [
+        294,
+        296
+      ],
+      "sha256": "a840c90b71dae1e9fae609230ecf79ba76804a5f6382442c21ab14c0d8bd4c5c",
+      "quote": "5.4. With the exception of the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council, an OAS traveler may not approve his/her own \"Request for Travel\" form or Official Travel Plan form.",
+      "why": "only the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council may approve their own travel request"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Two exceptions meet: the Assistant Secretary General may approve his own travel request (lines 294-296, unlike every other traveller), and his tickets are not held to economy (145-146, 324-328). Business at its cheapest: United at $1,150."
+}

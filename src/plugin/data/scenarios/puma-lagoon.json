@@ -1,0 +1,146 @@
+{
+  "id": "puma-lagoon",
+  "category": "hidden_clause",
+  "overlays": [
+    "dearer_option",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Dulles to Bogota on June 21st for the Commission's on-site hearings, which start the next morning. Hearing dates often move, so I'd like the full-fare economy ticket that can be changed or refunded without a fee.",
+  "trip": {
+    "traveller_name": "Dr. Valeria Cordero",
+    "traveller_title": "Commissioner, Inter-American Commission on Human Rights (elected)",
+    "position": "IACHR_COMMISSIONER",
+    "works_for": "Inter-American Commission on Human Rights",
+    "origin": "IAD",
+    "destination": "BOG",
+    "travel_date": "2027-06-21",
+    "business_travel_date": "2027-06-21",
+    "return_date": "",
+    "booking_date": "2027-05-03",
+    "work_starts": "2027-06-22 09:00",
+    "purpose": "On-site hearings of the IACHR in Bogota",
+    "purpose_kind": "HEARING",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": true,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "SECRETARY",
+        "name": "Jorge Elizondo",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-04-28",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved by the Executive Secretary of the IACHR"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "BOG",
+        "date": "2027-06-21",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "avianca": {
+            "carrier": "AV",
+            "depart": "08:30"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "10:15"
+          }
+        },
+        "offers": [
+          {
+            "slot": "avianca-economy",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 38500
+          },
+          {
+            "slot": "avianca-flexible",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 89000,
+            "refundable": true
+          },
+          {
+            "slot": "avianca-business",
+            "flight": "avianca",
+            "cabin": "BUSINESS",
+            "fare_cents": 160000
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 41000
+          },
+          {
+            "slot": "united-flexible",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 97500,
+            "refundable": true
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "avianca-flexible"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "FULL_ECONOMY_FARE_AUTHORIZED",
+      "SENIOR_ROLE_ENTITLEMENT"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY",
+      "SECRETARY_GENERAL"
+    ],
+    "clauses": [
+      "HUMAN_RIGHTS_COMMISSIONERS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        638,
+        642
+      ],
+      "sha256": "26cb63493506f854714c3003c02f4c93da0eec5750ac73c7bf1d88affd5fcfb3",
+      "quote": "8.6. Human Rights Commissioners: According to request GS/CIDH/10/09 and until further notice, the SG authorized an exception to allow the elected IACHR Commissioner to purchase full economy fares. However, all other rules herein continue to apply, including the need to process all available travel arguments through the designated travel agency (TMC) following the process determined by DP.",
+      "why": "the Secretary General's exception lets the elected IACHR Commissioner buy full economy fares"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Section 8.6 (lines 638-642), under Special Circumstances, records the Secretary General's exception allowing the elected IACHR Commissioner to purchase full economy fares. The commissioner asks for one: the cheapest refundable economy fare, Avianca at $890, not the $385 lowest fare."
+}

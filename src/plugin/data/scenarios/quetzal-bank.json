@@ -1,0 +1,168 @@
+{
+  "id": "quetzal-bank",
+  "category": "hidden_clause",
+  "overlays": [
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "We've invited Dr. Helen Park from the U.S. Centers for Disease Control as an expert for our mission in Bogota; as a U.S. Government official she can't receive payments in her own name. She flies Atlanta to Bogota on July 12th, and the mission starts the next morning. She normally flies business on government trips; book that if our policy allows it, otherwise what it allows.",
+  "trip": {
+    "traveller_name": "Dr. Helen Park",
+    "traveller_title": "Epidemiologist, U.S. Centers for Disease Control and Prevention (invited expert)",
+    "position": "INVITED_EXPERT",
+    "works_for": "U.S. Centers for Disease Control and Prevention",
+    "origin": "ATL",
+    "destination": "BOG",
+    "travel_date": "2027-07-12",
+    "business_travel_date": "2027-07-12",
+    "return_date": "",
+    "booking_date": "2027-05-24",
+    "work_starts": "2027-07-13 09:00",
+    "purpose": "Expert on the OAS health-security mission in Bogota",
+    "purpose_kind": "MISSION",
+    "requested_cabin": "BUSINESS",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Hector Lozano",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-05-20",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "ATL",
+        "destination": "BOG",
+        "date": "2027-07-12",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "delta": {
+            "carrier": "DL",
+            "depart": "09:20"
+          },
+          "avianca": {
+            "carrier": "AV",
+            "depart": "12:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "delta-economy",
+            "flight": "delta",
+            "cabin": "ECONOMY",
+            "fare_cents": 52000
+          },
+          {
+            "slot": "delta-business",
+            "flight": "delta",
+            "cabin": "BUSINESS",
+            "fare_cents": 145000
+          },
+          {
+            "slot": "avianca-economy",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 54500
+          },
+          {
+            "slot": "avianca-business",
+            "flight": "avianca",
+            "cabin": "BUSINESS",
+            "fare_cents": 151000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "delta-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ECONOMY_CLASS_REQUIRED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE"
+    ],
+    "clauses": [
+      "CABIN_EXCEPTIONS",
+      "CLASS_OF_SERVICE",
+      "OAS_TRAVELER",
+      "PAYMENT_RESTRICTED_INSTITUTIONS",
+      "PREMIUM_TRAVEL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        79,
+        80
+      ],
+      "sha256": "1d5fa951baf9662baa4d13e75c3040091eced9920318014333875166078732f4",
+      "quote": "OAS Traveler: includes Staff Members, Time Based Natural CPRs, SOCs, guests and every person (unless specifically written out) that travels on behalf of the GS/OAS or/and with GS/OAS funds.",
+      "why": "a guest travelling on GS/OAS funds is an OAS traveller"
+    },
+    {
+      "lines": [
+        644,
+        649
+      ],
+      "sha256": "f6fcc40c408d6decc8bea01a80a53b1f60f7b11d5cadc485c768ac830d5abc2a",
+      "quote": "8.7. Staff of Institutions unable to receive payments in their name: from time to time, the GS/OAS may invite experts or individuals from Organizations or Institutions (such as U.S. Government Officials) that are not allowed to receive payments issued in their own name. In those cases, the Department of Procurement has established the following procedure: 8.7.1. Fare accommodations will be purchased through the GS/OAS or the institution designated TMC",
+      "why": "guests from institutions that cannot receive payments: the GS/OAS buys the fare through its travel agency"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    },
+    {
+      "lines": [
+        149,
+        151
+      ],
+      "sha256": "88fabb7c43eba7985533707bf2d0ae8562f04687624b37df0d1b5a72e3361226",
+      "quote": "2.21 Premium Travel: travel completed by any means in a Travel Class other than Economy; this is considered an exception under this policy. To process a request for exception, a Premium Fare Authorization Form is available on the OAS Intranet, under Procurement Services.",
+      "why": "any class other than economy is an exception needing a Premium Fare Authorization Form"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A guest travelling with GS/OAS funds is an 'OAS Traveler' (lines 79-80, in Definitions), and for officials who cannot receive payments the GS/OAS buys the fare (8.7, lines 644-649). Every ticket paid with the Organization's funds is economy (324-328) and no Premium Fare form is on file: Delta economy at $520."
+}

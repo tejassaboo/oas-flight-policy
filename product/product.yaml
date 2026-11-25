@@ -1,0 +1,13 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "One flight request, an intergovernmental secretariat's real travel policy: book it, refuse it, or hold it for sign-off"
+summary: "An agent handles one traveller's flight request under the Travel Policy of the General Secretariat of the Organization of American States (Administrative Memorandum 122, Appendix A), read verbatim. It reads the trip record, searches a simulated flight world (real airports and airlines, synthetic schedules and fares) and submits a decision with the offer, cabin, reason, approver and policy section. A deterministic verifier rebuilds the offers and the policy's answer itself and checks every field. Twenty-four cases cover the economy rule and its three exempt officials, premium fare forms and who must sign them, comparable options and required connections to the dollar and the minute, late purchases, personal days, special exceptions, and the point where two of the policy's own rules collide."
+highlights:
+  - "The verbatim policy: no paraphrase, no rules restated in the task"
+  - "Exact boundaries: $199, $200 and $201 against the lowest fare, 240 against 241 minutes longer, 21 against 20 days"
+  - "Unclear clauses become holds for approval, each once, with clear twins on both sides"
+  - "Fully offline: a hash-seeded flight world with unguessable offer ids"
+steps:
+  - "Name a case, for example agave-ridge, with the traveller's request"
+  - "The agent reads the trip record and searches flights on the trip's route and date"
+  - "It submits BOOK, REFUSE or FLAG_FOR_APPROVAL with the offer, cabin, reason, approver and section"
+  - "The verifier recomputes the policy's answer and checks every field"

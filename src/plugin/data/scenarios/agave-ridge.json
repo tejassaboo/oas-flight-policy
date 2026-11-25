@@ -1,0 +1,160 @@
+{
+  "id": "agave-ridge",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm flying Dulles to Ottawa on February 9th for the meeting with Global Affairs Canada the next morning. Economy is fine for this one; book the lowest fare.",
+  "trip": {
+    "traveller_name": "Ernesto Valdivia",
+    "traveller_title": "Secretary General",
+    "position": "SECRETARY_GENERAL",
+    "works_for": "Office of the Secretary General",
+    "origin": "IAD",
+    "destination": "YOW",
+    "travel_date": "2027-02-09",
+    "business_travel_date": "2027-02-09",
+    "return_date": "",
+    "booking_date": "2026-12-15",
+    "work_starts": "2027-02-10 09:00",
+    "purpose": "Bilateral meeting with Global Affairs Canada in Ottawa",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "SECRETARY_GENERAL",
+        "name": "Ernesto Valdivia",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2026-12-15",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "YOW",
+        "date": "2027-02-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "united": {
+            "carrier": "UA",
+            "depart": "09:00"
+          },
+          "aircanada": {
+            "carrier": "AC",
+            "via": [
+              "YYZ"
+            ],
+            "depart": "07:30"
+          }
+        },
+        "offers": [
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 28900
+          },
+          {
+            "slot": "united-business",
+            "flight": "united",
+            "cabin": "BUSINESS",
+            "fare_cents": 79000
+          },
+          {
+            "slot": "aircanada-economy",
+            "flight": "aircanada",
+            "cabin": "ECONOMY",
+            "fare_cents": 31800
+          },
+          {
+            "slot": "aircanada-business",
+            "flight": "aircanada",
+            "cabin": "BUSINESS",
+            "fare_cents": 86000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "united-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "NONE",
+      "SECRETARY_GENERAL"
+    ],
+    "clauses": [
+      "CLASS_OF_SERVICE",
+      "LOWEST_LOGICAL_FARE",
+      "LOWEST_LOGICAL_FARE_DEFINITION",
+      "OWN_APPROVAL",
+      "TRAVEL_CLASS"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        145,
+        148
+      ],
+      "sha256": "be71c0665f1e7d89168f5b55a6c7d0da5b961a4bd4bfbc9e21013ce6ecf9dd64",
+      "quote": "2.20 Travel Class: With the exception of the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council, all GS/OAS Official Travel should be carried in Coach/Economy Class at the lowest logical fare. It should be reported to the Permanent Council on a quarterly basis any instance of noncompliance with this rule.",
+      "why": "economy at the lowest logical fare for all but the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council"
+    },
+    {
+      "lines": [
+        324,
+        335
+      ],
+      "sha256": "02dc909ce4489919353eed3dcd31945bbe386ef9de32716a622d4d42a52cf1f2",
+      "quote": "requires that all tickets paid for with the funds of the Organization be purchased in Economy Class, except for tickets purchased for travel by the Secretary General, the Assistant Secretary General, and the Chair of the Permanent Council",
+      "why": "economy class for every ticket paid with the Organization's funds, except the three officials"
+    },
+    {
+      "lines": [
+        363,
+        366
+      ],
+      "sha256": "c25d2103391cc176f43e44f50729317295414d02cb3497e460dc94c785f7899d",
+      "quote": "Some LLF may require at least one stop or layover. Lowest available fares must be used whenever possible.",
+      "why": "the lowest logical fare; lowest available fares whenever possible"
+    },
+    {
+      "lines": [
+        294,
+        296
+      ],
+      "sha256": "a840c90b71dae1e9fae609230ecf79ba76804a5f6382442c21ab14c0d8bd4c5c",
+      "quote": "5.4. With the exception of the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council, an OAS traveler may not approve his/her own \"Request for Travel\" form or Official Travel Plan form.",
+      "why": "only the Secretary General, the Assistant Secretary General and the Chair of the Permanent Council may approve their own travel request"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "The Secretary General is outside the economy rule (lines 145-146, 324-328) and may approve his own trip (lines 294-296), but asks for the lowest economy fare: United at $289. Business is permitted and correctly not taken."
+}

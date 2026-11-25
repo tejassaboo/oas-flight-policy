@@ -1,0 +1,155 @@
+{
+  "id": "nopal-harbor",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Dulles to Miami on March 1st for the hurricane-preparedness workshop the next morning. I'd rather fly United, if the policy lets me have it without any extra justification; if not, book what the policy calls for.",
+  "trip": {
+    "traveller_name": "Keisha Thompson",
+    "traveller_title": "Disaster Risk Officer",
+    "position": "STAFF_MEMBER",
+    "works_for": "Department of Sustainable Development",
+    "origin": "IAD",
+    "destination": "MIA",
+    "travel_date": "2027-03-01",
+    "business_travel_date": "2027-03-01",
+    "return_date": "",
+    "booking_date": "2027-01-11",
+    "work_starts": "2027-03-02 09:00",
+    "purpose": "Hurricane-preparedness workshop in Miami",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "requested_routing": "ANY",
+    "requested_airline": "United Airlines",
+    "requested_refundable": false,
+    "traveller_pays_difference": false,
+    "checked_bag_fees": "",
+    "ticket_from_others": "",
+    "ticket_from_others_suffices": false,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Marc Beaumont",
+        "subject": "TRAVEL_AUTHORIZATION",
+        "cabin": "NONE",
+        "signed_on": "2027-01-08",
+        "covers": "Individual Travel Request/Authorization Form for this trip, approved"
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IAD",
+        "destination": "MIA",
+        "date": "2027-03-01",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "american": {
+            "carrier": "AA",
+            "depart": "07:45"
+          },
+          "united": {
+            "carrier": "UA",
+            "depart": "10:05"
+          }
+        },
+        "offers": [
+          {
+            "slot": "american-economy",
+            "flight": "american",
+            "cabin": "ECONOMY",
+            "fare_cents": 19800
+          },
+          {
+            "slot": "united-economy",
+            "flight": "united",
+            "cabin": "ECONOMY",
+            "fare_cents": 33800
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "united-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "ALTERNATE_ROUTE_WITHIN_MARGIN",
+      "COMPARABLE_FARE_OPTION",
+      "LOYALTY_PROGRAM_PREFERENCE"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "NONE"
+    ],
+    "clauses": [
+      "COMPARABLE_OPTIONS",
+      "PERSONAL_PREFERENCE",
+      "PERSONAL_PREFERENCE_DEFINITION",
+      "SELECTION_OF_CARRIER"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        398,
+        401
+      ],
+      "sha256": "5df685c20c918d8db0f3427fb996b7a73a2c3308ade49f103768d4cea68c8c0a",
+      "quote": "6.8. Selection of Carrier: the selection of the LLF should be independent of the carrier. Unless it is determined to be in the best interest of the GS/OAS and approved by the Department of Procurement, request for specific carriers would be subject to the \"Personal Preference\" criteria as described above.",
+      "why": "a request for a specific carrier is subject to the personal preference criteria"
+    },
+    {
+      "lines": [
+        166,
+        173
+      ],
+      "sha256": "7b4a4c1f9b15825e01d5e19397920489315646fc81c09879a5eb3f9f8e7cde16",
+      "quote": "2.26 Comparable Options: options will be comparable as long as the total cost for alternative fares are not higher than $2002 when compared to the LLF. Alternative options, routes, stops or connecting flights will be required if savings of $200 or more can be achieved without extending the total one- way air travel time by more than four (4) hours. The GS/OAS and the designated TMC will always use caution to ensure that savings will not compromise convenience, business purpose, or safety. Travelers will be allowed to use their judgment and complete travel even when the alternative options exceed this allowance. Those cases will be reported and may require additional justification.",
+      "why": "options within $200 of the lowest logical fare are comparable; connections are required when they save $200 or more without adding more than four hours ('$2002' is $200 and footnote 2)"
+    },
+    {
+      "lines": [
+        387,
+        396
+      ],
+      "sha256": "9977cf8294f2acf0347313ce497e4cc575beba7dde0271f0ccc4fa25587f40d6",
+      "quote": "6.7. Personal preference: within this policy, if LLF as presented by the designated TMC is not selected by the traveler in lieu of a different alternative, this change will be reported as \"personal preference\". Please note that the TMC should provide travelers with all available options. These options will be comparable as long as the total cost for alternative fares are not higher than $200 when compared to the LLF. Alternative options, routes, stops or connecting flights will be required if savings of $200 or more can be achieved without extending the total one-way air travel time by more than four (4) hours. Travelers will be allowed to use their judgment and complete travel even when the alternative options exceed this personal preference allowance. Those cases will continue to be reported to the Department of Procurement and may be subject to additional justification.",
+      "why": "personal preference: comparable within $200; connections required when they save $200 or more within four hours; beyond the allowance the case is reported and may need justification"
+    },
+    {
+      "lines": [
+        47,
+        49
+      ],
+      "sha256": "57184c07e3f5a63c34ce1d82e1cfd143a459e94b0dbffd34bd0e3e4f271042e3",
+      "quote": "All requests for GS/OAS Official Travel must be authorized in advance and in writing by the corresponding area's highest authority (Director or Secretary, the Chief of Staff or the Secretary General)",
+      "why": "every trip is authorized in advance and in writing by the area's highest authority"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        477,
+        478
+      ],
+      "quote": "GS/OAS permits travelers to retain their frequent flyer mileage points",
+      "why": "miles are kept; it does not choose the fare"
+    }
+  ],
+  "design_notes": "A request for a specific carrier is 'subject to the Personal Preference criteria' (lines 398-401). United costs $140 more than the lowest logical fare, 'not higher than $200', so it is a comparable option (166-167, 389-391) and needs no extra justification: book United."
+}

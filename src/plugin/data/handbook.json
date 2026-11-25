@@ -1,0 +1,16 @@
+{
+  "id": "oas-flight-policy",
+  "name": "OAS Travel Policy Flight Booking",
+  "slug": "oas",
+  "title": "Travel Policy of the General Secretariat of the Organization of American States (Administrative Memorandum 122, Appendix A)",
+  "frozen_file": "oas_policy.txt",
+  "sha256": "a8d9c29ad0882f2b03bbcd02577a22cf7524f9581e194d5ed3dc73d9497370f2",
+  "raw_pdf_sha256": "81b08b8b7869664004cc66d826a301dfaca7b2098012aa8b472b8341d6d5f049",
+  "words": 8215,
+  "lines": 741,
+  "source": "https://www.oas.org/legal/english/admmem/admmen122.pdf",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 24,
+  "currency": "USD",
+  "background_offers": 0
+}
