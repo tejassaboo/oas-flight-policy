@@ -1,5 +1,7 @@
 # OAS Travel Policy Flight Booking
 
+**Source of the handbook:** https://www.oas.org/legal/english/admmem/admmen122.pdf. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with the Organization of American States.** The handbook is the *Travel Policy of the General
 Secretariat of the Organization of American States* (Administrative Memorandum 122, Appendix A; undated, cites
 AG/RES. 2437 of 2008), a public administrative memorandum posted on the OAS legal site
